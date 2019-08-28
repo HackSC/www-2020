@@ -8,6 +8,10 @@ const Landing = () => {
       <Head>
         <title>HackSC 2020</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          name="description"
+          content="HackSC 2020. USC's premier hackathon, coming back soon."
+        ></meta>
 
         <script
           async
