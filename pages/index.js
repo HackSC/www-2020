@@ -34,10 +34,12 @@ const Landing = () => {
         <Column>
           <Header>HackSC 2020</Header>
           <Subtitle>Coming back soon</Subtitle>
-          <Button href="https://hacksc.com/apply">Apply as an organizer</Button>
-          <SubLink href="https://2019.hacksc.com">
+          <Button href="https://hacksc.typeform.com/to/hmVvHx">
+            Apply as an organizer
+          </Button>
+          {/* <SubLink href="https://2019.hacksc.com">
             See site for HackSC 2019
-          </SubLink>
+          </SubLink> */}
         </Column>
       </Container>
     </>
