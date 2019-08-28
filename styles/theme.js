@@ -1,0 +1,31 @@
+const theme = {
+  fontSize: {
+    small: "14px",
+    default: "20px",
+    medium: "24px",
+    large: "48px"
+  },
+  fontWeight: {
+    light: "300",
+    default: "400"
+  },
+  color: {
+    dark: "#4A4A4A",
+    orange: "#FBA43A",
+    white: "#FFFFFF"
+  },
+  media: {
+    tablet: style => `
+      @media screen and (max-width: 768px) {
+        ${style}
+      }
+    `,
+    mobile: style => `
+      @media screen and (max-width: 425px) {
+        ${style}
+      }
+    `
+  }
+};
+
+export default theme;
