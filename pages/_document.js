@@ -33,7 +33,7 @@ export default class MyDocument extends Document {
       <html>
         <Head>
           <link
-            href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,800"
+            href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900&display=swap"
             rel="stylesheet"
           />
         </Head>

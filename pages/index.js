@@ -2,6 +2,9 @@ import Head from "next/head";
 
 import styled from "styled-components";
 
+import HackSC from "../assets/hacksc.svg";
+import WhiteFlower from "../assets/white_flower.svg";
+
 const Landing = () => {
   return (
     <>
@@ -31,67 +34,111 @@ const Landing = () => {
         <link rel="icon" type="image/png" href="/static/favicon.png" />
       </Head>
       <Container>
-        <Column>
-          <Header>HackSC 2020</Header>
-          <Subtitle>Coming back soon</Subtitle>
-          <Button href="https://hacksc.typeform.com/to/hmVvHx">
-            Apply as an organizer
-          </Button>
-          {/* <SubLink href="https://2019.hacksc.com">
-            See site for HackSC 2019
-          </SubLink> */}
-        </Column>
+        <Main>
+          <LogoText src={HackSC} alt="HackSC" />
+          <Header>Coming back soon to LA.</Header>
+          <Subtitle>
+            Help re-invent the Southern California collegiate hackathon
+            experience.
+          </Subtitle>
+          <Links>
+            <Button href="https://hacksc.typeform.com/to/hmVvHx">
+              Apply as an organizer
+            </Button>
+            <SubLink href="https://2019.hacksc.com">
+              See site for HackSC 2019
+            </SubLink>
+          </Links>
+        </Main>
+        <Flower>
+          <img src={WhiteFlower} alt="White wire flower" />
+        </Flower>
       </Container>
     </>
   );
 };
 
 const Container = styled.div`
-  max-width: 640px;
-  width: 100%;
+  max-width: 720px;
+  width: 93.75%;
   margin: 0 auto;
-  padding: 64px 0;
+  padding: 72px 0;
   display: flex;
+
+  ${({ theme }) => theme.media.tablet`
+    flex-direction: column-reverse;
+  `};
 `;
 
-const Column = styled.div`
+const Main = styled.div`
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+
+  ${({ theme }) => theme.media.tablet`
+    align-items: center;
+  `};
+`;
+
+const LogoText = styled.img`
+  margin-bottom: 24px;
 `;
 
 const Header = styled.h1`
   font-size: ${({ theme }) => theme.fontSize.large};
   font-weight: 800;
-  color: ${({ theme }) => theme.color.dark};
-  text-transform: uppercase;
-  font-weight: 700;
 `;
 
 const Subtitle = styled.h2`
   font-size: ${({ theme }) => theme.fontSize.medium};
-  color: ${({ theme }) => theme.color.dark};
-  margin-top: 32px;
+  margin-top: 16px;
   font-weight: 300;
+
+  ${({ theme }) => theme.media.tablet`
+    text-align: center;
+  `};
+`;
+
+const Links = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+
+  ${({ theme }) => theme.media.tablet`
+    flex-direction: column;
+  `};
 `;
 
 const Button = styled.a`
-  background-color: #fba43a;
-  border-radius: 26px;
-  padding: 20px 30px;
-  color: ${({ theme }) => theme.color.white};
+  background-color: #ffffff;
+  border-radius: 48px;
+  padding: 20px 40px;
+  color: #bc1e1e;
+  font-size: 18px;
   text-decoration: none;
-  margin-top: 32px;
   font-weight: 300;
 `;
 
 const SubLink = styled.a`
-  margin-top: 16px;
+  margin-left: 18px;
   font-size: ${({ theme }) => theme.fontSize.small};
-  color: ${({ theme }) => theme.color.dark};
+  color: ${({ theme }) => theme.color.white};
   text-decoration: none;
   font-weight: 300;
+
+  ${({ theme }) => theme.media.tablet`
+    margin-top: 16px;
+  `};
+`;
+
+const Flower = styled.div`
+  ${({ theme }) => theme.media.tablet`
+    align-self: center;
+    margin-bottom: 32px;
+  `};
 `;
 
 export default Landing;

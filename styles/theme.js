@@ -2,8 +2,8 @@ const theme = {
   fontSize: {
     small: "14px",
     default: "20px",
-    medium: "24px",
-    large: "48px"
+    medium: "20px",
+    large: "36px"
   },
   fontWeight: {
     light: "300",
