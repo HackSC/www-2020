@@ -40,6 +40,9 @@ const Landing = () => {
           <Subtitle>
             Help re-invent the Southern California collegiate hackathon
             experience.
+            <br />
+            <br />
+            App Deadline: 9/3 6PM
           </Subtitle>
           <Links>
             <Button href="https://hacksc.typeform.com/to/hmVvHx">
