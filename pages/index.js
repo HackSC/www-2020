@@ -37,20 +37,11 @@ const Landing = () => {
         <Main>
           <LogoText src={HackSC} alt="HackSC" />
           <Header>Coming back soon to LA.</Header>
-          <Subtitle>
-            Help re-invent the Southern California collegiate hackathon
-            experience.
-            <br />
-            <br />
-            App Deadline: 9/3 6PM
-          </Subtitle>
+          <Subtitle>Stay tuned for more.</Subtitle>
           <Links>
-            <Button href="https://hacksc.typeform.com/to/hmVvHx">
-              Apply as an organizer
-            </Button>
-            <SubLink href="https://2019.hacksc.com">
+            <Button href="https://2019.hacksc.com">
               See site for HackSC 2019
-            </SubLink>
+            </Button>
           </Links>
         </Main>
         <Flower>
