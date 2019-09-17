@@ -36,8 +36,8 @@ const Landing = () => {
       <Container>
         <Main>
           <LogoText src={HackSC} alt="HackSC" />
-          <Header>Coming back soon to LA.</Header>
-          <Subtitle>Stay tuned for more.</Subtitle>
+          <Header>Out for lunch.</Header>
+          <Subtitle>Returning with more news this Fall.</Subtitle>
           <Links>
             <Button href="https://2019.hacksc.com">
               See site for HackSC 2019
