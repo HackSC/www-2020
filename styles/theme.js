@@ -20,9 +20,15 @@ const theme = {
     darkGrey: "#757575",
     yellow: "#FEDA22",
     lightGrey: "#B2B2B2",
-    pink: "#FF8379"
+    pink: "#FF8379",
+    blue: "#86DCEA"
   },
   media: {
+    nearTablet: style => `
+      @media screen and (max-width: 1050px) {
+        ${style}
+      }
+    `,
     tablet: style => `
       @media screen and (max-width: 768px) {
         ${style}
