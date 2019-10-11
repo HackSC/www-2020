@@ -69,13 +69,40 @@ const DotFlowerLeft = styled.img`
   left: -90px;
   top: 170px;
   z-index: -8;
+
+  animation-name: fade;
+  animation-duration: 1.5s;
+
+  @keyframes fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 `;
 
 const HandGraphic = styled.img`
   position: absolute;
-  left: -65%;
+  left: -300%;
   z-index: -5;
   max-width: 1000px;
+  animation-name: zoomzoom;
+  animation-duration: 1.5s;
+  animation-delay: 0.25s;
+  animation-fill-mode: forwards;
+
+  @keyframes zoomzoom {
+    from {
+      left: -200%;
+      opacity: 0;
+    }
+    to {
+      left: -65%;
+      opacity: 1;
+    }
+  }
 `;
 
 const GradientBlobGraphic = styled.img`
@@ -84,6 +111,17 @@ const GradientBlobGraphic = styled.img`
   top: -30px;
   z-index: -10;
   max-width: 700px;
+  animation-name: fade;
+  animation-duration: 1.5s;
+
+  @keyframes fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 `;
 
 const LinesGraphic = styled.img`
@@ -92,6 +130,17 @@ const LinesGraphic = styled.img`
   top: 55%;
   z-index: -10;
   max-width: 700px;
+  animation-name: fade;
+  animation-duration: 1.5s;
+
+  @keyframes fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 `;
 
 const Header = styled.h1`
@@ -115,7 +164,7 @@ const Date = styled.p`
 
 const Content = styled.p`
   font-size: 16px;
-  line-height: 20px;
+  line-height: 24px;
   margin-bottom: 32px;
 `;
 
@@ -149,7 +198,7 @@ const EmailForm = styled.div`
     color: #ffffff;
     font-weight: 600;
     text-transform: uppercase;
-    text-align: left;
+    text-align: center;
   }
 `;
 
