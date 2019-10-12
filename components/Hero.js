@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 
 import styled from "styled-components";
 
@@ -8,6 +8,12 @@ import GradientBlob from "../assets/hero_gradient_blob.png";
 import Lines from "../assets/hero_lines_decoration.png";
 
 const Hero = () => {
+  const emailSubmit = e => {
+    window.alert(emailRef.current.value);
+  };
+
+  const emailRef = useRef(null);
+
   return (
     <Container>
       <Wrapper>
@@ -27,8 +33,8 @@ const Hero = () => {
           </Content>
 
           <EmailForm>
-            <input type="email" placeholder="Email" />
-            <button>Stay Up to Date</button>
+            <input type="email" placeholder="Email" ref={emailRef} />
+            <button onClick={emailSubmit}>Stay Up to Date</button>
           </EmailForm>
 
           <FormContext>
