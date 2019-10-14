@@ -64,10 +64,22 @@ const Wrapper = styled.div`
   padding-top: 200px;
   padding-bottom: 200px;
   position: relative;
+
+  ${({ theme }) => theme.media.tablet`
+    padding-top: 50px;
+    padding-bottom: 50px;
+  `}
 `;
 
 const CTA = styled.div`
   width: 550px;
+
+  ${({ theme }) => theme.media.tablet`
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-sizing: border-box;
+  `}
 `;
 
 const DotFlowerLeftGraphic = styled.img`
@@ -78,6 +90,10 @@ const DotFlowerLeftGraphic = styled.img`
 
   animation-name: fade;
   animation-duration: 1.5s;
+
+  ${({ theme }) => theme.media.tablet`
+    display: none;
+  `}
 `;
 
 const HandGraphic = styled.img`
@@ -89,6 +105,10 @@ const HandGraphic = styled.img`
   animation-duration: 1.5s;
   animation-delay: 0.25s;
   animation-fill-mode: forwards;
+
+  ${({ theme }) => theme.media.tablet`
+    display: none;
+  `}
 `;
 
 const GradientBlobGraphic = styled.img`
@@ -99,6 +119,10 @@ const GradientBlobGraphic = styled.img`
   max-width: 700px;
   animation-name: fade;
   animation-duration: 1.5s;
+
+  ${({ theme }) => theme.media.tablet`
+    display: none;
+  `}
 `;
 
 const LinesGraphic = styled.img`
@@ -109,12 +133,17 @@ const LinesGraphic = styled.img`
   max-width: 700px;
   animation-name: fade;
   animation-duration: 1.5s;
+
+  ${({ theme }) => theme.media.tablet`
+    display: none;
+  `}
 `;
 
 const Header = styled.h1`
   font-weight: 700;
   font-size: 48px;
   font-style: italic;
+  line-height: 60px;
 `;
 
 const Rainbow = styled.span`
