@@ -42,7 +42,7 @@ const Hero = () => {
             application opens.
           </FormContext>
         </CTA>
-        <DotFlowerLeft src={DotFlower} />
+        <DotFlowerLeftGraphic src={DotFlower} />
         <HandGraphic src={Hand} />
         <GradientBlobGraphic src={GradientBlob} />
         <LinesGraphic src={Lines} />
@@ -70,7 +70,7 @@ const CTA = styled.div`
   width: 550px;
 `;
 
-const DotFlowerLeft = styled.img`
+const DotFlowerLeftGraphic = styled.img`
   position: absolute;
   left: -90px;
   top: 170px;
@@ -78,15 +78,6 @@ const DotFlowerLeft = styled.img`
 
   animation-name: fade;
   animation-duration: 1.5s;
-
-  @keyframes fade {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
 `;
 
 const HandGraphic = styled.img`
@@ -94,21 +85,10 @@ const HandGraphic = styled.img`
   left: -300%;
   z-index: -5;
   max-width: 1000px;
-  animation-name: zoomzoom;
+  animation-name: slideFromLeft;
   animation-duration: 1.5s;
   animation-delay: 0.25s;
   animation-fill-mode: forwards;
-
-  @keyframes zoomzoom {
-    from {
-      left: -200%;
-      opacity: 0;
-    }
-    to {
-      left: -65%;
-      opacity: 1;
-    }
-  }
 `;
 
 const GradientBlobGraphic = styled.img`
@@ -119,15 +99,6 @@ const GradientBlobGraphic = styled.img`
   max-width: 700px;
   animation-name: fade;
   animation-duration: 1.5s;
-
-  @keyframes fade {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
 `;
 
 const LinesGraphic = styled.img`
@@ -138,15 +109,6 @@ const LinesGraphic = styled.img`
   max-width: 700px;
   animation-name: fade;
   animation-duration: 1.5s;
-
-  @keyframes fade {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
 `;
 
 const Header = styled.h1`
