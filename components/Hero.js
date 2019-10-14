@@ -8,11 +8,11 @@ import GradientBlob from "../assets/hero_gradient_blob.png";
 import Lines from "../assets/hero_lines_decoration.png";
 
 const Hero = () => {
-  const emailSubmit = e => {
-    window.alert(emailRef.current.value);
-  };
-
   const emailRef = useRef(null);
+
+  const submitEmail = e => {
+    // TODO: Write e-mail to API
+  };
 
   return (
     <Container>
@@ -34,7 +34,7 @@ const Hero = () => {
 
           <EmailForm>
             <input type="email" placeholder="Email" ref={emailRef} />
-            <button onClick={emailSubmit}>Stay Up to Date</button>
+            <button onClick={submitEmail}>Stay Up to Date</button>
           </EmailForm>
 
           <FormContext>
