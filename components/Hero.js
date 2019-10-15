@@ -38,7 +38,7 @@ const Hero = () => {
 
         <EmailForm>
           <TextInput type="email" placeholder="Email" ref={emailRef} />
-          <Button onClick={submitEmail}>Stay Up to Date</Button>
+          <EmailButton onClick={submitEmail}>Stay Up to Date</EmailButton>
         </EmailForm>
 
         <FormContext>
@@ -161,6 +161,19 @@ const EmailForm = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 32px;
+
+  ${({ theme }) => theme.media.tablet`
+    flex-direction: column;
+  `}
+`;
+
+const EmailButton = styled(Button)`
+  margin-left: 16px;
+
+  ${({ theme }) => theme.media.tablet`
+    margin-top: 16px;
+    margin-left: 0;
+  `}
 `;
 
 const FormContext = styled.p`
