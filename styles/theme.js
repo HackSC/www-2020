@@ -12,7 +12,8 @@ const theme = {
   color: {
     dark: "#4A4A4A",
     orange: "#FBA43A",
-    white: "#FFFFFF"
+    white: "#FFFFFF",
+    darkText: "#1C1C1C"
   },
   media: {
     tablet: style => `

@@ -12,7 +12,7 @@ const GlobalStyles = createGlobalStyle`
 
   body {
     font-family: AktivGrotesk, sans-serif;
-    color: #1C1C1C;
+    color: ${({ theme }) => theme.color.darkText};
   }
 `;
 

@@ -2,6 +2,10 @@ import React, { useRef } from "react";
 
 import styled from "styled-components";
 
+import { Header, Body, Bold, Italic } from "./type";
+import Button from "./Button";
+import TextInput from "./TextInput";
+
 import DotFlower from "../assets/dot_flower.png";
 import Hand from "../assets/hero_hand_la.png";
 import GradientBlob from "../assets/hero_gradient_blob.png";
@@ -15,43 +19,40 @@ const Hero = () => {
   };
 
   return (
-    <Container>
-      <Wrapper>
-        <CTA>
-          <Header>
-            The future is in your hands at <Rainbow>HackSC 2020</Rainbow>
-          </Header>
-          <Date>01.31.20 - 02.02.20</Date>
-          <Content>
-            <Bold>HackSC</Bold> is the University of Southern California’s
-            largest hackathon. This year, we’re focused on bringing{" "}
-            <em>
-              <Bold>real</Bold>
-            </em>{" "}
-            solutions to those in need by pushing the boundaries of technology,
-            innovation, and collaboration.
-          </Content>
+    <Wrapper>
+      <CTA>
+        <ItalicHeader>
+          The future is in your hands at <Rainbow>HackSC 2020</Rainbow>
+        </ItalicHeader>
+        <Date>01.31.20 - 02.02.20</Date>
 
-          <EmailForm>
-            <input type="email" placeholder="Email" ref={emailRef} />
-            <button onClick={submitEmail}>Stay Up to Date</button>
-          </EmailForm>
+        <Body>
+          <Bold>HackSC</Bold> is the University of Southern California’s largest
+          hackathon. This year, we’re focused on bringing{" "}
+          <Italic>
+            <Bold>real</Bold>
+          </Italic>{" "}
+          solutions to those in need by pushing the boundaries of technology,
+          innovation, and collaboration.
+        </Body>
 
-          <FormContext>
-            Subscribe to be notified of HackSC 2020 events, including when our
-            application opens.
-          </FormContext>
-        </CTA>
-        <DotFlowerLeftGraphic src={DotFlower} />
-        <HandGraphic src={Hand} />
-        <GradientBlobGraphic src={GradientBlob} />
-        <LinesGraphic src={Lines} />
-      </Wrapper>
-    </Container>
+        <EmailForm>
+          <TextInput type="email" placeholder="Email" ref={emailRef} />
+          <Button onClick={submitEmail}>Stay Up to Date</Button>
+        </EmailForm>
+
+        <FormContext>
+          Subscribe to be notified of HackSC 2020 events, including when our
+          application opens.
+        </FormContext>
+      </CTA>
+      <DotFlowerLeftGraphic src={DotFlower} />
+      <HandGraphic src={Hand} />
+      <GradientBlobGraphic src={GradientBlob} />
+      <LinesGraphic src={Lines} />
+    </Wrapper>
   );
 };
-
-const Container = styled.div``;
 
 const Wrapper = styled.div`
   display: flex;
@@ -139,11 +140,8 @@ const LinesGraphic = styled.img`
   `}
 `;
 
-const Header = styled.h1`
-  font-weight: 700;
-  font-size: 48px;
+const ItalicHeader = styled(Header)`
   font-style: italic;
-  line-height: 60px;
 `;
 
 const Rainbow = styled.span`
@@ -159,44 +157,10 @@ const Date = styled.p`
   margin: 12px 0;
 `;
 
-const Content = styled.p`
-  font-size: 16px;
-  line-height: 24px;
-  margin-bottom: 32px;
-`;
-
-const Bold = styled.span`
-  font-weight: 600;
-`;
-
 const EmailForm = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 32px;
-
-  input[type="email"] {
-    flex-basis: 55%;
-    border-radius: 8px;
-    border: 1px solid #b2b2b2;
-    padding: 12px 16px;
-    font-weight: 600;
-    color: #b2b2b2;
-    font-size: 16px;
-  }
-
-  button {
-    padding: 12px 16px;
-    border: none;
-    border-radius: 8px;
-    background: #ff8379;
-    flex-grow: 1;
-    margin-left: 16px;
-    font-size: 12px;
-    color: #ffffff;
-    font-weight: 600;
-    text-transform: uppercase;
-    text-align: center;
-  }
 `;
 
 const FormContext = styled.p`
