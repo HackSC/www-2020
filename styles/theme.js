@@ -16,6 +16,11 @@ const theme = {
     darkText: "#1C1C1C"
   },
   media: {
+    desktop: style => `
+      @media screen and (max-width: 960px) {
+        ${style}
+      }
+    `,
     tablet: style => `
       @media screen and (max-width: 768px) {
         ${style}

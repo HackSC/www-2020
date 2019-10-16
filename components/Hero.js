@@ -46,10 +46,19 @@ const Hero = () => {
           application opens.
         </FormContext>
       </CTA>
-      <DotFlowerLeftGraphic src={DotFlower} />
-      <HandGraphic src={Hand} />
-      <GradientBlobGraphic src={GradientBlob} />
-      <LinesGraphic src={Lines} />
+      <DotFlowerLeftGraphic
+        src={DotFlower}
+        alt="Dot flower graphic used for decoration"
+      />
+      <HandGraphic
+        src={Hand}
+        alt="Grayscale image of hand holding the city of LA"
+      />
+      <GradientBlobGraphic
+        src={GradientBlob}
+        alt="Gradient blob in the background"
+      />
+      <LinesGraphic src={Lines} alt="Lines graphic used for decoration" />
     </Wrapper>
   );
 };
@@ -66,6 +75,11 @@ const Wrapper = styled.div`
   padding-bottom: 200px;
   position: relative;
 
+  ${({ theme }) => theme.media.desktop`
+    padding-top: 100px;
+    padding-bottom: 100px;
+  `}
+
   ${({ theme }) => theme.media.tablet`
     padding-top: 50px;
     padding-bottom: 50px;
@@ -74,6 +88,10 @@ const Wrapper = styled.div`
 
 const CTA = styled.div`
   width: 550px;
+
+  ${({ theme }) => theme.media.desktop`
+    width: 50%;
+  `}
 
   ${({ theme }) => theme.media.tablet`
     width: 100%;
