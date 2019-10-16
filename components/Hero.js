@@ -53,7 +53,12 @@ const Hero = () => {
           netlify
           onSubmit={submitEmail}
         >
-          <TextInput type="email" placeholder="Email" ref={emailRef} />
+          <TextInput
+            type="email"
+            name="email"
+            placeholder="Email"
+            ref={emailRef}
+          />
           <EmailButton type="submit">Stay Up to Date</EmailButton>
           <input type="hidden" name="form-name" value="email-subscribe" />
         </EmailForm>
