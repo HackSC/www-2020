@@ -10,15 +10,15 @@ const Fonts = css`
 
   @font-face {
     font-family: "AktivGrotesk";
-    src: url("/static/fonts/aktive_bd.woff") format("woff");
-    font-weight: 700;
+    src: url("/static/fonts/aktiv_md.woff") format("woff");
+    font-weight: 600;
     font-style: normal;
   }
 
   @font-face {
     font-family: "AktivGrotesk";
-    src: url("/static/fonts/aktiv_md.woff") format("woff");
-    font-weight: 600;
+    src: url("/static/fonts/aktiv_bd.woff") format("woff");
+    font-weight: 700;
     font-style: normal;
   }
 `;

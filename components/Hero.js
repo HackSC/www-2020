@@ -1,6 +1,10 @@
-import React, { useRef } from "react";
+import React, { useState, useRef } from "react";
 
 import styled from "styled-components";
+
+import { Header, Body, Bold, Italic } from "./type";
+import Button from "./Button";
+import TextInput from "./TextInput";
 
 import DotFlower from "../assets/dot_flower.png";
 import Hand from "../assets/hero_hand_la.png";
@@ -8,50 +12,87 @@ import GradientBlob from "../assets/hero_gradient_blob.png";
 import Lines from "../assets/hero_lines_decoration.png";
 
 const Hero = () => {
+  const [subscribed, setSubscribed] = useState(false);
   const emailRef = useRef(null);
 
-  const submitEmail = e => {
-    // TODO: Write e-mail to API
+  const submitEmail = async e => {
+    e.preventDefault();
+
+    const email = emailRef.current.value;
+    const serializedEmail = `form-name=email-subscribe&email=${encodeURI(
+      email
+    )}`;
+
+    await fetch(e.target.action, {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: serializedEmail
+    });
+
+    setSubscribed(true);
   };
 
   return (
-    <Container>
-      <Wrapper>
-        <CTA>
-          <Header>
-            The future is in your hands at <Rainbow>HackSC 2020</Rainbow>
-          </Header>
-          <Date>01.31.20 - 02.02.20</Date>
-          <Content>
-            <Bold>HackSC</Bold> is the University of Southern California’s
-            largest hackathon. This year, we’re focused on bringing{" "}
-            <em>
-              <Bold>real</Bold>
-            </em>{" "}
-            solutions to those in need by pushing the boundaries of technology,
-            innovation, and collaboration.
-          </Content>
+    <Wrapper>
+      <CTA>
+        <ItalicHeader>
+          The future is in your hands at <Rainbow>HackSC 2020</Rainbow>
+        </ItalicHeader>
+        <Date>01.31.20 - 02.02.20</Date>
 
-          <EmailForm>
-            <input type="email" placeholder="Email" ref={emailRef} />
-            <button onClick={submitEmail}>Stay Up to Date</button>
-          </EmailForm>
+        <Body>
+          <Bold>HackSC</Bold> is the University of Southern California’s largest
+          hackathon. This year, we’re focused on bringing{" "}
+          <Italic>
+            <Bold>real</Bold>
+          </Italic>{" "}
+          solutions to those in need by pushing the boundaries of technology,
+          innovation, and collaboration.
+        </Body>
 
-          <FormContext>
-            Subscribe to be notified of HackSC 2020 events, including when our
-            application opens.
-          </FormContext>
-        </CTA>
-        <DotFlowerLeftGraphic src={DotFlower} />
-        <HandGraphic src={Hand} />
-        <GradientBlobGraphic src={GradientBlob} />
-        <LinesGraphic src={Lines} />
-      </Wrapper>
-    </Container>
+        <EmailForm
+          name="email-subscribe"
+          method="POST"
+          netlify
+          onSubmit={submitEmail}
+        >
+          <TextInput
+            type="email"
+            name="email"
+            placeholder="Email"
+            ref={emailRef}
+          />
+          <EmailButton type="submit">Stay Up to Date</EmailButton>
+          <input type="hidden" name="form-name" value="email-subscribe" />
+        </EmailForm>
+
+        <FormContext>
+          Subscribe to be notified of HackSC 2020 events, including when our
+          application opens.
+        </FormContext>
+
+        {subscribed && (
+          <FormSuccess>
+            Your e-mail has been successfully submitted!
+          </FormSuccess>
+        )}
+      </CTA>
+      <DotFlowerLeftGraphic
+        src={DotFlower}
+        alt="Dot flower graphic used for decoration"
+      />
+      <HandGraphic
+        src={Hand}
+        alt="Grayscale image of hand holding the city of LA"
+      />
+      <GradientBlobGraphic
+        src={GradientBlob}
+        alt="Gradient blob in the background"
+      />
+      <LinesGraphic src={Lines} alt="Lines graphic used for decoration" />
+    </Wrapper>
   );
 };
-
-const Container = styled.div``;
 
 const Wrapper = styled.div`
   display: flex;
@@ -65,6 +106,11 @@ const Wrapper = styled.div`
   padding-bottom: 200px;
   position: relative;
 
+  ${({ theme }) => theme.media.desktop`
+    padding-top: 100px;
+    padding-bottom: 100px;
+  `}
+
   ${({ theme }) => theme.media.tablet`
     padding-top: 50px;
     padding-bottom: 50px;
@@ -73,6 +119,10 @@ const Wrapper = styled.div`
 
 const CTA = styled.div`
   width: 550px;
+
+  ${({ theme }) => theme.media.desktop`
+    width: 50%;
+  `}
 
   ${({ theme }) => theme.media.tablet`
     width: 100%;
@@ -139,11 +189,8 @@ const LinesGraphic = styled.img`
   `}
 `;
 
-const Header = styled.h1`
-  font-weight: 700;
-  font-size: 48px;
+const ItalicHeader = styled(Header)`
   font-style: italic;
-  line-height: 60px;
 `;
 
 const Rainbow = styled.span`
@@ -159,44 +206,32 @@ const Date = styled.p`
   margin: 12px 0;
 `;
 
-const Content = styled.p`
-  font-size: 16px;
-  line-height: 24px;
-  margin-bottom: 32px;
-`;
-
-const Bold = styled.span`
-  font-weight: 600;
-`;
-
-const EmailForm = styled.div`
+const EmailForm = styled.form`
   display: flex;
   justify-content: space-between;
   margin-bottom: 32px;
 
-  input[type="email"] {
-    flex-basis: 55%;
-    border-radius: 8px;
-    border: 1px solid #b2b2b2;
-    padding: 12px 16px;
-    font-weight: 600;
-    color: #b2b2b2;
-    font-size: 16px;
-  }
+  ${({ theme }) => theme.media.tablet`
+    flex-direction: column;
+  `}
+`;
 
-  button {
-    padding: 12px 16px;
-    border: none;
-    border-radius: 8px;
-    background: #ff8379;
-    flex-grow: 1;
-    margin-left: 16px;
-    font-size: 12px;
-    color: #ffffff;
-    font-weight: 600;
-    text-transform: uppercase;
-    text-align: center;
-  }
+const EmailButton = styled(Button)`
+  margin-left: 16px;
+
+  ${({ theme }) => theme.media.tablet`
+    margin-top: 16px;
+    margin-left: 0;
+  `}
+`;
+
+const FormSuccess = styled.p`
+  color: #86dcea;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 16px;
+  animation-name: fade;
+  animation-duration: 0.5s;
 `;
 
 const FormContext = styled.p`
