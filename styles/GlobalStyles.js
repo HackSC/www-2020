@@ -1,13 +1,18 @@
 import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
 
+import Animations from "./Animations";
+import Fonts from "./Fonts";
+
 const GlobalStyles = createGlobalStyle`
   ${reset}
 
+  ${Animations}
+  ${Fonts}
+
   body {
-    font-family: 'Source Sans Pro', sans-serif;
-    background-image: linear-gradient(90deg, #ED213A 0%, #93291E 100%);
-    color: ${({ theme }) => theme.color.white};
+    font-family: AktivGrotesk, sans-serif;
+    color: ${({ theme }) => theme.color.darkText};
   }
 `;
 

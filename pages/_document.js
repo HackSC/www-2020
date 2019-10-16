@@ -31,12 +31,7 @@ export default class MyDocument extends Document {
   render() {
     return (
       <html>
-        <Head>
-          <link
-            href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900&display=swap"
-            rel="stylesheet"
-          />
-        </Head>
+        <Head />
         <body>
           <Main />
           <NextScript />
