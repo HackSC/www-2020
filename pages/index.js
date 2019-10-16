@@ -1,4 +1,4 @@
-import { Navbar, Hero, MetaTags } from "../components";
+import { Navbar, Hero, MetaTags, Details } from "../components";
 
 const Landing = () => {
   return (
@@ -7,6 +7,7 @@ const Landing = () => {
 
       <Navbar />
       <Hero />
+      <Details />
     </>
   );
 };

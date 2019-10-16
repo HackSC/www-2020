@@ -3,7 +3,7 @@ import styled from "styled-components";
 const Body = styled.p`
   font-size: 16px;
   line-height: 24px;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 `;
 
 const Bold = styled.b`
