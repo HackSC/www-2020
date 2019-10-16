@@ -22,6 +22,7 @@ const Hero = () => {
 
     await fetch(e.target.action, {
       method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: serializedEmail
     });
   };
@@ -47,7 +48,7 @@ const Hero = () => {
         <EmailForm
           name="email-subscribe"
           method="POST"
-          data-netlify="true"
+          netlify
           onSubmit={submitEmail}
         >
           <TextInput type="email" placeholder="Email" ref={emailRef} />
