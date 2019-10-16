@@ -94,12 +94,20 @@ const Fact = styled.p`
 const Row = styled.div`
   display: flex;
   flex-direction: row;
+
+  ${({ theme }) => theme.media.tablet`
+    flex-direction: column;
+  `}
 `;
 
 const ContentColumn = styled.div`
   display: flex;
   flex-direction: column;
   flex-basis: 50%;
+
+  ${({ theme }) => theme.media.tablet`
+    flex-basis: 100%;
+  `}
 `;
 
 const FactsColumn = styled.div`
@@ -109,6 +117,11 @@ const FactsColumn = styled.div`
   padding-left: 100px;
   padding-right: 100px;
   box-sizing: border-box;
+
+  ${({ theme }) => theme.media.tablet`
+    flex-basis: 100%;
+    padding: 0;
+  `}
 `;
 
 export default Details;
