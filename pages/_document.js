@@ -38,6 +38,9 @@ export default class MyDocument extends Document {
           />
         </Head>
         <body>
+          <form name="email" netlify hidden>
+            <input type="email" name="email" />
+          </form>
           <Main />
           <NextScript />
         </body>
