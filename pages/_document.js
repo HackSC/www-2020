@@ -38,7 +38,7 @@ export default class MyDocument extends Document {
           />
         </Head>
         <body>
-          <form name="email" netlify hidden>
+          <form name="email-subscribe" netlify hidden>
             <input type="email" name="email" />
           </form>
           <Main />
