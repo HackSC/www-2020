@@ -27,7 +27,7 @@ const Hero = () => {
     const email = emailRef.current.value;
     const serializedBody = encode({
       "form-name": "email-subscribe",
-      "bot-field": true,
+      "bot-field": "",
       email: email
     });
 
