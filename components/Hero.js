@@ -15,18 +15,16 @@ const Hero = () => {
   const emailRef = useRef(null);
 
   const submitEmail = async e => {
-    e.preventDefault();
-
-    const email = emailRef.current.value;
-    const serializedEmail = `form-name=email-subscribe&email=${encodeURI(
-      email
-    )}`;
-
-    await fetch(e.target.action, {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: serializedEmail
-    });
+    // e.preventDefault();
+    // const email = emailRef.current.value;
+    // const serializedEmail = `form-name=email-subscribe&email=${encodeURI(
+    //   email
+    // )}`;
+    // await fetch(e.target.action, {
+    //   method: "POST",
+    //   headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    //   body: serializedEmail
+    // });
   };
 
   return (
