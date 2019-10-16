@@ -6,7 +6,7 @@ const Details = () => {
   return (
     <Wrapper>
       <Row>
-        <ContentColumn>
+        <Column>
           <DetailsHeader>Details</DetailsHeader>
 
           <Body>
@@ -30,7 +30,7 @@ const Details = () => {
             </a>
             .
           </Body>
-        </ContentColumn>
+        </Column>
 
         <FactsColumn>
           <FactHeader>When?</FactHeader>
@@ -100,7 +100,7 @@ const Row = styled.div`
   `}
 `;
 
-const ContentColumn = styled.div`
+const Column = styled.div`
   display: flex;
   flex-direction: column;
   flex-basis: 50%;
@@ -110,10 +110,7 @@ const ContentColumn = styled.div`
   `}
 `;
 
-const FactsColumn = styled.div`
-  display: flex;
-  flex-direction: column;
-  flex-basis: 50%;
+const FactsColumn = styled(Column)`
   padding-left: 100px;
   padding-right: 100px;
   box-sizing: border-box;
