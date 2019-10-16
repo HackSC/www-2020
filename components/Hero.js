@@ -14,8 +14,16 @@ import Lines from "../assets/hero_lines_decoration.png";
 const Hero = () => {
   const emailRef = useRef(null);
 
-  const submitEmail = e => {
-    // TODO: Write e-mail to API
+  const submitEmail = async e => {
+    e.preventDefault();
+
+    const email = emailRef.current.value;
+    const serializedEmail = `email=${encodeURI(email)}`;
+
+    await fetch(e.target.action, {
+      method: "POST",
+      body: serializedEmail
+    });
   };
 
   return (
@@ -36,9 +44,15 @@ const Hero = () => {
           innovation, and collaboration.
         </Body>
 
-        <EmailForm>
+        <EmailForm
+          name="email-subscribe"
+          method="POST"
+          data-netlify="true"
+          onSubmit={submitEmail}
+        >
           <TextInput type="email" placeholder="Email" ref={emailRef} />
-          <EmailButton onClick={submitEmail}>Stay Up to Date</EmailButton>
+          <EmailButton type="submit">Stay Up to Date</EmailButton>
+          <input type="hidden" name="form-name" value="email-subscribe" />
         </EmailForm>
 
         <FormContext>
@@ -175,7 +189,7 @@ const Date = styled.p`
   margin: 12px 0;
 `;
 
-const EmailForm = styled.div`
+const EmailForm = styled.form`
   display: flex;
   justify-content: space-between;
   margin-bottom: 32px;
