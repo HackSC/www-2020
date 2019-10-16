@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useState, useRef } from "react";
 
 import styled from "styled-components";
 
@@ -12,19 +12,24 @@ import GradientBlob from "../assets/hero_gradient_blob.png";
 import Lines from "../assets/hero_lines_decoration.png";
 
 const Hero = () => {
+  const [subscribed, setSubscribed] = useState(false);
   const emailRef = useRef(null);
 
   const submitEmail = async e => {
-    // e.preventDefault();
-    // const email = emailRef.current.value;
-    // const serializedEmail = `form-name=email-subscribe&email=${encodeURI(
-    //   email
-    // )}`;
-    // await fetch(e.target.action, {
-    //   method: "POST",
-    //   headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    //   body: serializedEmail
-    // });
+    e.preventDefault();
+
+    const email = emailRef.current.value;
+    const serializedEmail = `form-name=email-subscribe&email=${encodeURI(
+      email
+    )}`;
+
+    await fetch(e.target.action, {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: serializedEmail
+    });
+
+    setSubscribed(true);
   };
 
   return (
@@ -53,7 +58,7 @@ const Hero = () => {
         >
           <TextInput
             type="email"
-            name="test"
+            name="email"
             placeholder="Email"
             ref={emailRef}
           />
@@ -65,6 +70,12 @@ const Hero = () => {
           Subscribe to be notified of HackSC 2020 events, including when our
           application opens.
         </FormContext>
+
+        {subscribed && (
+          <FormSuccess>
+            Your e-mail has been successfully submitted!
+          </FormSuccess>
+        )}
       </CTA>
       <DotFlowerLeftGraphic
         src={DotFlower}
@@ -212,6 +223,15 @@ const EmailButton = styled(Button)`
     margin-top: 16px;
     margin-left: 0;
   `}
+`;
+
+const FormSuccess = styled.p`
+  color: #86dcea;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 16px;
+  animation-name: fade;
+  animation-duration: 0.5s;
 `;
 
 const FormContext = styled.p`
