@@ -54,6 +54,7 @@ const Hero = () => {
           name="email-subscribe"
           method="POST"
           netlify
+          data-netlify-honeypot="bot-field"
           onSubmit={submitEmail}
         >
           <TextInput
@@ -63,6 +64,7 @@ const Hero = () => {
             ref={emailRef}
           />
           <EmailButton type="submit">Stay Up to Date</EmailButton>
+          <input type="hidden" name="bot-field" />
           <input type="hidden" name="form-name" value="email-subscribe" />
         </EmailForm>
 
