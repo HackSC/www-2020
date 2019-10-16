@@ -3,11 +3,11 @@ import styled from "styled-components";
 
 import Logo from "../assets/header_logo.png";
 
-const Header = () => {
+const Navbar = () => {
   return (
     <Wrapper>
       <Container>
-        <img src={Logo} width="169" />
+        <img src={Logo} width="169" alt="HackSC 2020 logo" />
       </Container>
     </Wrapper>
   );
@@ -24,4 +24,4 @@ const Container = styled.div`
   margin-right: auto;
 `;
 
-export default Header;
+export default Navbar;
