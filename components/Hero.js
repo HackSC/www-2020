@@ -53,7 +53,7 @@ const Hero = () => {
         >
           <TextInput
             type="email"
-            name="email"
+            name="test"
             placeholder="Email"
             ref={emailRef}
           />
