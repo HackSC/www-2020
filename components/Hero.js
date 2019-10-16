@@ -11,6 +11,13 @@ import Hand from "../assets/hero_hand_la.png";
 import GradientBlob from "../assets/hero_gradient_blob.png";
 import Lines from "../assets/hero_lines_decoration.png";
 
+// Encode -- used to turn JSON object into encoded URI
+function encode(data) {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+}
+
 const Hero = () => {
   const [subscribed, setSubscribed] = useState(false);
   const emailRef = useRef(null);
@@ -18,13 +25,18 @@ const Hero = () => {
   const submitEmail = async e => {
     e.preventDefault();
     const email = emailRef.current.value;
-    const serializedEmail = `
-      form-name=email-subscribe&email=${encodeURIComponent(email)}&bot-field`;
+    const serializedBody = encode({
+      "form-name": "email-subscribe",
+      "bot-field": true,
+      email: email
+    });
+
     await fetch(e.target.action, {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: serializedEmail
+      body: serializedBody
     });
+
     setSubscribed(true);
   };
 
