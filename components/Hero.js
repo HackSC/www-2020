@@ -49,7 +49,7 @@ const Hero = () => {
         <EmailForm
           name="email-subscribe"
           method="POST"
-          netlify
+          data-netlify="true"
           data-netlify-honeypot="bot-field"
           onSubmit={submitEmail}
         >
