@@ -21,6 +21,13 @@ const Fonts = css`
     font-weight: 700;
     font-style: normal;
   }
+
+  @font-face {
+    font-family: "Proggy";
+    src: url("/static/fonts/proggy.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+  }
 `;
 
 export default Fonts;
