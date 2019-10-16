@@ -18,9 +18,9 @@ const Hero = () => {
     e.preventDefault();
 
     const email = emailRef.current.value;
-    const serializedEmail = `email=${encodeURI(
+    const serializedEmail = `form-name=email-subscribe&email=${encodeURI(
       email
-    )}&form-name=email-subscribe`;
+    )}`;
 
     await fetch(e.target.action, {
       method: "POST",
