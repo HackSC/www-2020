@@ -1,45 +1,16 @@
-import React, { useState, useRef } from "react";
+import React from "react";
 
 import styled from "styled-components";
 
 import { Header, Body, Bold, Italic } from "./type";
-import Button from "./Button";
-import TextInput from "./TextInput";
+import EmailSubscribeForm from "./EmailSubscribeForm";
 
 import DotFlower from "../assets/dot_flower.png";
 import Hand from "../assets/hero_hand_la.png";
 import GradientBlob from "../assets/hero_gradient_blob.png";
 import Lines from "../assets/hero_lines_decoration.png";
 
-// Encode -- used to turn JSON object into encoded URI
-function encode(data) {
-  return Object.keys(data)
-    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&");
-}
-
 const Hero = () => {
-  const [subscribed, setSubscribed] = useState(false);
-  const emailRef = useRef(null);
-
-  const submitEmail = async e => {
-    e.preventDefault();
-    const email = emailRef.current.value;
-    const serializedBody = encode({
-      "form-name": "email-subscribe",
-      "bot-field": "",
-      email: email
-    });
-
-    await fetch(e.target.action, {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: serializedBody
-    });
-
-    setSubscribed(true);
-  };
-
   return (
     <Wrapper>
       <CTA>
@@ -58,34 +29,7 @@ const Hero = () => {
           innovation, and collaboration.
         </Body>
 
-        <EmailForm
-          name="email-subscribe"
-          method="POST"
-          data-netlify="true"
-          data-netlify-honeypot="bot-field"
-          onSubmit={submitEmail}
-        >
-          <TextInput
-            name="email"
-            type="email"
-            placeholder="Email"
-            ref={emailRef}
-          />
-          <EmailButton type="submit">Stay Up to Date</EmailButton>
-          <input type="hidden" name="bot-field" />
-          <input type="hidden" name="form-name" value="email-subscribe" />
-        </EmailForm>
-
-        <FormContext>
-          Subscribe to be notified of HackSC 2020 events, including when our
-          application opens.
-        </FormContext>
-
-        {subscribed && (
-          <FormSuccess>
-            Your e-mail has been successfully submitted!
-          </FormSuccess>
-        )}
+        <EmailSubscribeForm />
       </CTA>
       <DotFlowerLeftGraphic
         src={DotFlower}
@@ -159,6 +103,7 @@ const DotFlowerLeftGraphic = styled.img`
 const HandGraphic = styled.img`
   position: absolute;
   left: -300%;
+  top: -90px;
   z-index: -5;
   max-width: 1000px;
   animation-name: slideFromLeft;
@@ -188,7 +133,7 @@ const GradientBlobGraphic = styled.img`
 const LinesGraphic = styled.img`
   position: absolute;
   left: -20%;
-  top: 55%;
+  top: 450px;
   z-index: -10;
   max-width: 700px;
   animation-name: fade;
@@ -214,39 +159,6 @@ const Date = styled.p`
   font-weight: 700;
   font-size: 16px;
   margin: 12px 0;
-`;
-
-const EmailForm = styled.form`
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 32px;
-
-  ${({ theme }) => theme.media.tablet`
-    flex-direction: column;
-  `}
-`;
-
-const EmailButton = styled(Button)`
-  margin-left: 16px;
-
-  ${({ theme }) => theme.media.tablet`
-    margin-top: 16px;
-    margin-left: 0;
-  `}
-`;
-
-const FormSuccess = styled.p`
-  color: #86dcea;
-  font-size: 14px;
-  font-weight: 600;
-  margin-top: 16px;
-  animation-name: fade;
-  animation-duration: 0.5s;
-`;
-
-const FormContext = styled.p`
-  color: #757575;
-  font-size: 14px;
 `;
 
 export default Hero;
