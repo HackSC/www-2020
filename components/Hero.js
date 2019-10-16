@@ -57,8 +57,8 @@ const Hero = () => {
           onSubmit={submitEmail}
         >
           <TextInput
-            type="email"
             name="email"
+            type="email"
             placeholder="Email"
             ref={emailRef}
           />
