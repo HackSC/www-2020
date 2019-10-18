@@ -82,7 +82,8 @@ const Wrapper = styled.div`
 
 const VerticalsHeader = styled.h2`
   font-family: "Proggy";
-  font-size: 26px;
+  font-size: 28px;
+  text-transform: uppercase;
 `;
 
 const Row = styled.div`
