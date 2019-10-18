@@ -14,6 +14,11 @@ const GlobalStyles = createGlobalStyle`
     font-family: AktivGrotesk, sans-serif;
     color: ${({ theme }) => theme.color.darkText};
   }
+
+  a {
+    color: #FF8379;
+    text-decoration: none;
+  }
 `;
 
 export default GlobalStyles;
