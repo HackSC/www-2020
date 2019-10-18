@@ -17,6 +17,11 @@ const EmailSubscribeForm = () => {
 
   const submitEmail = async e => {
     e.preventDefault();
+
+    if (subscribed || emailRef.current.value.trim() === "") {
+      return;
+    }
+
     const serializedBody = encode({
       "form-name": "email-subscribe",
       "bot-field": "",
@@ -76,6 +81,7 @@ const EmailForm = styled.form`
 
 const EmailButton = styled(Button)`
   margin-left: 16px;
+  cursor: pointer;
 
   ${({ theme }) => theme.media.tablet`
     margin-top: 16px;
