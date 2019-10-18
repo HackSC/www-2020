@@ -21,6 +21,11 @@ const theme = {
         ${style}
       }
     `,
+    handOverlap: style => `
+      @media screen and (max-width: 860px) {
+        ${style}
+      }
+    `,
     tablet: style => `
       @media screen and (max-width: 768px) {
         ${style}
