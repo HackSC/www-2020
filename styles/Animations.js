@@ -20,6 +20,17 @@ const Animations = css`
       opacity: 1;
     }
   }
+
+  @keyframes slideFromLeftTablet {
+    from {
+      left: -200%;
+      opacity: 0;
+    }
+    to {
+      left: -78%;
+      opacity: 1;
+    }
+  }
 `;
 
 export default Animations;
