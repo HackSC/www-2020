@@ -111,6 +111,10 @@ const HandGraphic = styled.img`
   animation-delay: 0.25s;
   animation-fill-mode: forwards;
 
+  ${({ theme }) => theme.media.handOverlap`
+    animation-name: slideFromLeftTablet;
+  `}
+
   ${({ theme }) => theme.media.tablet`
     display: none;
   `}
