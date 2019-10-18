@@ -57,7 +57,6 @@ const Wrapper = styled.div`
   margin-left: auto;
   margin-right: auto;
   padding-top: 125px;
-  padding-bottom: 125px;
   flex-direction: column;
 `;
 
