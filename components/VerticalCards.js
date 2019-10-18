@@ -34,7 +34,6 @@ const Card = styled.div`
 
   ${({ theme }) => theme.media.mobile` 
     width: 100%;
-    background: red;
   `}
 
   img {
