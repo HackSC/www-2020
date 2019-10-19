@@ -43,7 +43,15 @@ const Verticals = () => {
                 or off.
               </p>
             </CardFront>
-            <CardBack>this is the back</CardBack>
+            <CardBack>
+              <h4>Civil Liberties</h4>
+
+              <p>
+                Help provide technological solutions to issues such as online
+                harassment, workplace misconduct, and bullying, in ways which
+                are innovative, accessible, and straightforward.
+              </p>
+            </CardBack>
           </CardContent>
         </Card>
 
@@ -61,7 +69,15 @@ const Verticals = () => {
               </p>
             </CardFront>
 
-            <CardBack>this is the back</CardBack>
+            <CardBack>
+              <h4>Sustainability</h4>
+
+              <p>
+                Find creative ways to help curb pollution of all varieties,
+                enable access to better environmental scientific literature, or
+                any other cause you see fit to help the planet we all share.{" "}
+              </p>
+            </CardBack>
           </CardContent>
         </Card>
 
@@ -76,7 +92,14 @@ const Verticals = () => {
               </p>
             </CardFront>
 
-            <CardBack>this is the back</CardBack>
+            <CardBack>
+              <h4>Equity</h4>
+
+              <p>
+                Create a product which helps level the playing field by aiding
+                access to information that everyone is entitled to have.
+              </p>
+            </CardBack>
           </CardContent>
         </Card>
 
@@ -94,7 +117,16 @@ const Verticals = () => {
               </p>
             </CardFront>
 
-            <CardBack>this is the back</CardBack>
+            <CardBack>
+              <h4>Mental Health</h4>
+
+              <p>
+                Contribute to the progress of services by making a product which
+                facilitates care, serves as a liaison to accurate information,
+                works to raise awareness, or any other action you see fit to
+                help the vast category of mental health.
+              </p>
+            </CardBack>
           </CardContent>
         </Card>
       </Cards>

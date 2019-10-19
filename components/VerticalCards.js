@@ -20,6 +20,7 @@ const Card = styled.div`
   width: 24%;
   margin-left: 8px;
   margin-right: 8px;
+  margin-bottom: 16px;
   box-sizing: border-box;
   height: 380px;
   perspective: 1000px;
@@ -34,7 +35,7 @@ const Card = styled.div`
     width: 48%;
     margin-left: 4px;
     margin-right: 4px;
-    margin-bottom: 12px;
+    margin-bottom: 26px;
   `}
 
   ${({ theme }) => theme.media.mobile` 
@@ -56,6 +57,17 @@ const Card = styled.div`
     margin-top: 35px;
     text-transform: uppercase;
     color: ${({ color }) => color};
+  }
+
+  h4 {
+    font-family: "Proggy";
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: left;
+    padding-top: 12px;
+    margin-left: 16px;
+    margin-right: 16px;
+    border-top: 5px solid ${({ color }) => color};
   }
 
   p {
@@ -96,6 +108,13 @@ const CardBack = styled.div`
   height: 100%;
   backface-visibility: hidden;
   transform: rotateY(180deg);
+
+  p {
+    text-align: left;
+    color: black;
+    font-size: 16px;
+    line-height: 24px;
+  }
 `;
 
 export { Cards, Card, CardContent, CardFront, CardBack };
