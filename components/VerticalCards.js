@@ -24,6 +24,7 @@ const Card = styled.div`
   box-sizing: border-box;
   height: 380px;
   perspective: 1000px;
+  cursor: pointer;
 
   &:hover {
     > div {
