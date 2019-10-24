@@ -4,3 +4,4 @@ export { default as MetaTags } from "./MetaTags";
 export { default as Details } from "./Details";
 export { default as Verticals } from "./Verticals";
 export { default as Footer } from "./Footer";
+export { default as MLH } from "./MLH";
