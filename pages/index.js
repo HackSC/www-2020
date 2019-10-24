@@ -4,7 +4,8 @@ import {
   MetaTags,
   Details,
   Verticals,
-  Footer
+  Footer,
+  MLH
 } from "../components";
 
 const Landing = () => {
@@ -17,6 +18,7 @@ const Landing = () => {
       <Details />
       <Verticals />
       <Footer />
+      <MLH />
     </>
   );
 };
