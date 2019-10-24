@@ -16,20 +16,27 @@ const Cards = styled.div`
 `;
 
 const Card = styled.div`
-  box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   width: 24%;
   margin-left: 8px;
   margin-right: 8px;
+  margin-bottom: 16px;
   box-sizing: border-box;
   height: 380px;
-  padding: 36px 0;
+  perspective: 1000px;
+  cursor: pointer;
+
+  &:hover {
+    > div {
+      transform: rotateY(180deg);
+    }
+  }
 
   ${({ theme }) => theme.media.desktop`
     width: 48%;
     margin-left: 4px;
     margin-right: 4px;
-    margin-bottom: 12px;
+    margin-bottom: 26px;
   `}
 
   ${({ theme }) => theme.media.mobile` 
@@ -53,6 +60,17 @@ const Card = styled.div`
     color: ${({ color }) => color};
   }
 
+  h4 {
+    font-family: "Proggy";
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: left;
+    padding-top: 12px;
+    margin-left: 16px;
+    margin-right: 16px;
+    border-top: 5px solid ${({ color }) => color};
+  }
+
   p {
     font-size: 14px;
     color: #757575;
@@ -65,4 +83,39 @@ const Card = styled.div`
   }
 `;
 
-export { Cards, Card };
+const CardContent = styled.div`
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  border-radius: 8px;
+  box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.2);
+  padding: 36px 0;
+  box-sizing: border-box;
+`;
+
+const CardFront = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+`;
+
+const CardBack = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+
+  p {
+    text-align: left;
+    color: black;
+    font-size: 16px;
+    line-height: 24px;
+  }
+`;
+
+export { Cards, Card, CardContent, CardFront, CardBack };
