@@ -14,7 +14,7 @@ const Sponsor = () => {
       <Wrapper>
         <Header>Sponsor Us</Header>
         <StyledBody>
-          This January, HackSC will bring <Bold>1000+</Bold> hackers to the
+          This January, HackSC will bring <Bold>800+</Bold> hackers to the
           University of Southern California. Students will have 36 hours to
           create lasting, innovative and impactful products. Sponsors will have
           an outstanding opportunity to{" "}
@@ -34,7 +34,7 @@ const Sponsor = () => {
 
           <Stats>
             <Stat>
-              <Number>600+</Number> attendees
+              <Number>800+</Number> attendees
             </Stat>
             <Stat>
               <Number>100</Number> projects submitted
