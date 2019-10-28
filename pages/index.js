@@ -3,6 +3,7 @@ import {
   Hero,
   MetaTags,
   Details,
+  Sponsors,
   Verticals,
   Footer,
   MLH
@@ -17,6 +18,7 @@ const Landing = () => {
       <Hero />
       <Details />
       <Verticals />
+      <Sponsors />
       <Footer />
       <MLH />
     </>
