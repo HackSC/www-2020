@@ -101,6 +101,7 @@ const CardFront = styled.div`
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
+  transform: rotateY(0deg);
 `;
 
 const CardBack = styled.div`
