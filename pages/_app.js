@@ -1,5 +1,6 @@
 import React from "react";
 import App, { Container } from "next/app";
+import { hotjar } from "react-hotjar";
 import { ThemeProvider } from "styled-components";
 
 import { GlobalStyles, theme } from "../styles";
@@ -13,6 +14,10 @@ class HackSC extends App {
     }
 
     return { pageProps };
+  }
+
+  componentDidMount() {
+    hotjar.initialize("1547187");
   }
 
   render() {
