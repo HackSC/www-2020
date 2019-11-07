@@ -3,7 +3,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { Header, Body, Bold, Italic } from "./type";
-import EmailSubscribeForm from "./EmailSubscribeForm";
+import Button from "./Button";
 
 import DotFlower from "../assets/dot_flower.png";
 import Hand from "../assets/hero_hand_la.png";
@@ -29,7 +29,9 @@ const Hero = () => {
           innovation, and collaboration.
         </Body>
 
-        <EmailSubscribeForm />
+        <Button as="a" href="https://odyssey.hacksc.com" target="_blank">
+          Apply to HackSC 2020
+        </Button>
       </CTA>
       <DotFlowerLeftGraphic
         src={DotFlower}
