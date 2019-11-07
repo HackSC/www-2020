@@ -7,7 +7,15 @@ const Navbar = () => {
   return (
     <Wrapper>
       <Container>
-        <img src={Logo} width="169" alt="HackSC 2020 logo" />
+        <a href="/">
+          <img src={Logo} width="169" alt="HackSC 2020 logo" />
+        </a>
+
+        <Links>
+          <a href="/">Overview</a>
+          <a href="/sponsor">Sponsorship</a>
+          <a href="//2019.hacksc.com">HackSC '19</a>
+        </Links>
       </Container>
     </Wrapper>
   );
@@ -22,6 +30,23 @@ const Container = styled.div`
   max-width: 960px;
   margin-left: auto;
   margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+const Links = styled.div`
+  a {
+    padding: 0 12px;
+    color: #1c1c1c;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+
+  ${({ theme }) => theme.media.mobile`
+    display: none;
+  `}
 `;
 
 export default Navbar;
