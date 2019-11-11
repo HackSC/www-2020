@@ -1,2 +1,2 @@
 /apply https://odyssey.hacksc.com
-/apply?* https://odyssey.hacksc.com/?:splat
+/apply?ref=* https://odyssey.hacksc.com/?ref=:splat
