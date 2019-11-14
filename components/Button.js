@@ -11,6 +11,17 @@ const Button = styled.button`
   font-weight: 600;
   text-transform: uppercase;
   text-align: center;
+
+  ${({ hero }) =>
+    hero &&
+    `
+      font-size: 16px;
+      padding: 14px 18px;
+      margin-top: 24px;
+      display: block;
+      width: auto;
+      max-width: 240px;
+    `}
 `;
 
 export default Button;
