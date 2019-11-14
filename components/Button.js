@@ -11,6 +11,13 @@ const Button = styled.button`
   font-weight: 600;
   text-transform: uppercase;
   text-align: center;
+
+  ${({ large }) =>
+    large &&
+    `
+      font-size: 16px;
+      padding: 14px 18px;
+    `}
 `;
 
 export default Button;

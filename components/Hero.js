@@ -29,7 +29,7 @@ const Hero = () => {
           innovation, and collaboration.
         </Body>
 
-        <Button as="a" href="https://odyssey.hacksc.com" target="_blank">
+        <Button as="a" href="https://odyssey.hacksc.com" target="_blank" large>
           Apply to HackSC 2020
         </Button>
       </CTA>
