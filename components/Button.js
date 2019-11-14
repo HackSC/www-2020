@@ -12,11 +12,15 @@ const Button = styled.button`
   text-transform: uppercase;
   text-align: center;
 
-  ${({ large }) =>
-    large &&
+  ${({ hero }) =>
+    hero &&
     `
       font-size: 16px;
       padding: 14px 18px;
+      margin-top: 24px;
+      display: block;
+      width: auto;
+      max-width: 240px;
     `}
 `;
 
