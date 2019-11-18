@@ -54,8 +54,9 @@ const Footer = () => {
           <ContactBody>
             Reach out to us at{" "}
             <a href="mailto:hackers@hacksc.com">hackers@hacksc.com</a> or on
-            social media if you have any questions, want more information, or
-            want to talk about sponsorship!
+            social media if you have any questions or want more information.
+            Want to talk about sponsorship? Let us know at{" "}
+            <a href="mailto:sponsorship@hacksc.com">sponsorship@hacksc.com</a>!
           </ContactBody>
         </ContactColumn>
       </Row>
