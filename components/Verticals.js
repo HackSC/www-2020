@@ -22,7 +22,7 @@ const Verticals = () => {
           <Column>
             <Body>
               This year, we’re focusing on issues relating to social justice.
-              The 4 verticals are: civil liberties, sustainability, equity, and
+              The 4 verticals are: civil rights, sustainability, equity, and
               mental health. We’re encouraging every participant to tackle the
               problems plaguing today’s world and innovate ideas around them.
             </Body>
