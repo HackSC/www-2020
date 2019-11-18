@@ -44,7 +44,7 @@ const Verticals = () => {
               </p>
             </CardFront>
             <CardBack>
-              <h4>Civil Liberties</h4>
+              <h4>Civil Rights</h4>
 
               <p>
                 Help provide technological solutions to issues such as online
