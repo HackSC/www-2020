@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Header, Body } from "./type";
 import { Cards, Card, CardContent, CardFront, CardBack } from "./VerticalCards";
 
-import CivilLibertiesGraphic from "../assets/verticals/civil_liberties.png";
+import CivilRightsGraphic from "../assets/verticals/civil_rights.png";
 import EquityGraphic from "../assets/verticals/equity.png";
 import MentalHealthGraphic from "../assets/verticals/mental_health.png";
 import SustainabilityGraphic from "../assets/verticals/sustainability.png";
@@ -34,10 +34,10 @@ const Verticals = () => {
           <CardContent>
             <CardFront>
               <img
-                src={CivilLibertiesGraphic}
-                alt="Graphic that represents civil liberties"
+                src={CivilRightsGraphic}
+                alt="Graphic that represents civil rights"
               />
-              <h3>Civil Liberties</h3>
+              <h3>Civil Rights</h3>
               <p>
                 Everyone deserves to feel comfortable in their own skin, online
                 or off.
