@@ -3,7 +3,6 @@ import React from "react";
 import styled from "styled-components";
 
 import { Header, Body, Bold, Italic } from "./type";
-import Button from "./Button";
 
 import DotFlower from "../assets/dot_flower.png";
 import Hand from "../assets/hero_hand_la.png";
@@ -29,9 +28,10 @@ const Hero = () => {
           innovation, and collaboration.
         </Body>
 
-        <Button as="a" href="https://odyssey.hacksc.com" target="_blank" hero>
-          Apply to HackSC 2020
-        </Button>
+        <AppsClosed>
+          Applications for HackSC 2020 have closed. Be on the lookout for status
+          updates soon
+        </AppsClosed>
       </CTA>
       <DotFlowerLeftGraphic
         src={DotFlower}
@@ -165,6 +165,13 @@ const Date = styled.p`
   font-weight: 700;
   font-size: 16px;
   margin: 12px 0;
+`;
+
+const AppsClosed = styled.p`
+  color: #ff8379;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: italic;
 `;
 
 export default Hero;
