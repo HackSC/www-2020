@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 import { Header, Body } from "./type";
+import SponsorLogos from "./SponsorLogos";
 import Button from "./Button";
 
 const Sponsors = () => {
@@ -21,6 +22,8 @@ const Sponsors = () => {
               sponsorship@hacksc.com
             </a>
           </Body>
+
+          <SponsorLogos />
 
           <div>
             <LearnMoreButton as="a" href="/sponsor">
