@@ -23,13 +23,13 @@ const Sponsors = () => {
             </a>
           </Body>
 
-          <SponsorLogos />
-
           <div>
             <LearnMoreButton as="a" href="/sponsor">
               Learn More
             </LearnMoreButton>
           </div>
+
+          <SponsorLogos />
         </Column>
       </Row>
     </Wrapper>
