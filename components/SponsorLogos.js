@@ -66,14 +66,10 @@ const SponsorLogoImg = styled.a`
   padding-right: 15px;
 
   ${({ venicePlus, malibu }) =>
-    malibu
-      ? `max-width: 40%;`
-      : venicePlus
-      ? `max-width: 22%`
-      : `max-width: 18%;`}
+    malibu ? `width: 33%;` : venicePlus ? `width: 22%` : `width: 18%;`}
 
   ${({ theme }) => theme.media.tablet`
-    max-width: 50%;
+    width: 50%;
   `}
 
   img {
