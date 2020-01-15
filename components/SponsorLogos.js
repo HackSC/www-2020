@@ -2,13 +2,16 @@ import React from "react";
 
 import styled from "styled-components";
 
-const Sponsor = ({ source, malibu, venicePlus }) => {
+const Sponsor = ({ source, malibu, venicePlus, href }) => {
   return (
     <SponsorLogoImg
-      src={source}
+      href={href ? href : "#"}
       malibu={malibu ? 1 : 0}
       venicePlus={venicePlus ? 1 : 0}
-    />
+      target="_blank"
+    >
+      <img src={source} />
+    </SponsorLogoImg>
   );
 };
 
@@ -34,6 +37,13 @@ const SponsorLogos = () => (
       <Sponsor source="/static/logos/way2b1-venice.svg" />
       <Sponsor source="/static/logos/algorand-venice.svg" />
     </LogoGroup>
+
+    <LogoGroup>
+      <Sponsor
+        source="/static/logos/stickermule-inkind.svg"
+        href="http://hackp.ac/mlh-stickermule-hackathons"
+      />
+    </LogoGroup>
   </LogosContainer>
 );
 
@@ -50,21 +60,25 @@ const LogoGroup = styled.div`
   padding: 24px 0;
 `;
 
-const SponsorLogoImg = styled.img`
+const SponsorLogoImg = styled.a`
   box-sizing: border-box;
   padding-left: 15px;
   padding-right: 15px;
 
   ${({ venicePlus, malibu }) =>
     malibu
-      ? `max-width: 25%;`
+      ? `max-width: 40%;`
       : venicePlus
-      ? `max-width: 18%`
-      : `max-width: 14%;`}
+      ? `max-width: 22%`
+      : `max-width: 18%;`}
 
   ${({ theme }) => theme.media.tablet`
     max-width: 50%;
   `}
+
+  img {
+    width: 100%;
+  }
 `;
 
 export default SponsorLogos;
