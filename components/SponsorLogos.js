@@ -35,7 +35,6 @@ const SponsorLogos = () => (
       <Sponsor source="/static/logos/nimbella-venice.svg" />
       <Sponsor source="/static/logos/teleportal-venice.svg" />
       <Sponsor source="/static/logos/way2b1-venice.svg" />
-      <Sponsor source="/static/logos/algorand-venice.svg" />
     </LogoGroup>
 
     <LogoGroup>
