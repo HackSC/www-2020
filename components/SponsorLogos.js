@@ -35,6 +35,10 @@ const SponsorLogos = () => (
       <Sponsor source="/static/logos/nimbella-venice.svg" />
       <Sponsor source="/static/logos/teleportal-venice.svg" />
       <Sponsor source="/static/logos/way2b1-venice.svg" />
+      <Sponsor
+        source="/static/logos/ledu-venice.svg"
+        href="https://www.education-ecosystem.com/"
+      />
     </LogoGroup>
 
     <LogoGroup>
