@@ -18,23 +18,62 @@ const Sponsor = ({ source, malibu, venicePlus, href }) => {
 const SponsorLogos = () => (
   <LogosContainer>
     <LogoGroup>
-      <Sponsor source="/static/logos/accenture-malibu.jpg" malibu />
-      <Sponsor source="/static/logos/alwaysai-malibu.svg" malibu />
-      <Sponsor source="/static/logos/machenike-malibu.png" malibu />
-      <Sponsor source="/static/logos/n3twork-malibu.svg" malibu />
+      <Sponsor 
+        source="/static/logos/accenture-malibu.jpg" 
+        href="https://www.accenture.com/"
+        malibu 
+      />
+      <Sponsor 
+        source="/static/logos/alwaysai-malibu.svg" 
+        href="https://alwaysai.co/"
+        malibu
+      />
+      <Sponsor 
+        source="/static/logos/machenike-malibu.png" 
+        href="https://www.machenike.com/"
+        malibu
+      />
+      <Sponsor 
+        source="/static/logos/n3twork-malibu.png"
+        href="https://n3twork.com/"
+        malibu
+      />
     </LogoGroup>
 
     <LogoGroup>
-      <Sponsor source="/static/logos/mux-veniceplus.svg" venicePlus />
-      <Sponsor source="/static/logos/xpring-veniceplus.png" venicePlus />
+      <Sponsor 
+        source="/static/logos/mux-veniceplus.svg"
+        href="https://mux.com/"
+        venicePlus
+      />
+      <Sponsor 
+        source="/static/logos/xpring-veniceplus.png"
+        href="https://xpring.io/"
+        venicePlus
+      />
     </LogoGroup>
 
     <LogoGroup>
-      <Sponsor source="/static/logos/gcp-venice.png" />
-      <Sponsor source="/static/logos/linode-venice.svg" />
-      <Sponsor source="/static/logos/nimbella-venice.svg" />
-      <Sponsor source="/static/logos/teleportal-venice.svg" />
-      <Sponsor source="/static/logos/way2b1-venice.svg" />
+      <Sponsor 
+        source="/static/logos/gcp-venice.png"
+        href="https://cloud.google.com/"
+      />
+      <Sponsor 
+        source="/static/logos/linode-venice.svg"
+        href="https://www.linode.com/"  
+      />
+      <Sponsor 
+        source="/static/logos/nimbella-venice.svg"
+        href="https://nimbella.com/"
+      />
+      <Sponsor 
+        source="/static/logos/teleportal-venice.svg"
+        href="https://teleportal.dev/"
+      />
+      <Sponsor 
+        source="/static/logos/way2b1-venice.svg"
+        href="https://www.way2b1.com/"
+      />
       <Sponsor
         source="/static/logos/ledu-venice.svg"
         href="https://www.education-ecosystem.com/"
