@@ -6,3 +6,4 @@ export { default as Sponsors } from "./Sponsors";
 export { default as Verticals } from "./Verticals";
 export { default as Footer } from "./Footer";
 export { default as MLH } from "./MLH";
+export { default as SponsorFeedbackForm } from "./SponsorFeedbackForm";
