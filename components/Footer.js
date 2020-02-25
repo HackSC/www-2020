@@ -64,7 +64,7 @@ const Footer = () => {
   );
 };
 
-const Wrapper = styled.div`
+const Wrapper = styled.footer`
   background: #f6f6f6;
   padding-top: 64px;
   padding-bottom: 64px;
