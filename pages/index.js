@@ -16,11 +16,7 @@ const Landing = () => {
 
       <Navbar />
       <Hero />
-      <Details />
-      <Verticals />
-      <Sponsors />
       <Footer />
-      <MLH />
     </>
   );
 };
