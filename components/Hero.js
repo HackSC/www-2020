@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 import { Header, Body, Bold, Italic } from "./type";
 
+import Button from "./Button";
 import DotFlower from "../assets/dot_flower.png";
 import Hand from "../assets/hero_hand_la.png";
 import GradientBlob from "../assets/hero_gradient_blob.png";
@@ -13,25 +14,16 @@ const Hero = () => {
   return (
     <Wrapper>
       <CTA>
-        <ItalicHeader>
-          The future is in your hands at <Rainbow>HackSC 2020</Rainbow>
-        </ItalicHeader>
-        <Date>01.31.20 - 02.02.20</Date>
+        <Header style={{ fontSize: 25, lineHeight: 1.5 }}>
+          Thank you for joining us at <Rainbow>HackSC 2020!</Rainbow>
+        </Header>
 
-        <Body>
-          <Bold>HackSC</Bold> is the University of Southern California’s largest
-          hackathon. This year, we’re focused on bringing{" "}
-          <Italic>
-            <Bold>real</Bold>
-          </Italic>{" "}
-          solutions to those in need by pushing the boundaries of technology,
-          innovation, and collaboration.
-        </Body>
-
-        <AppsClosed>
-          Applications for HackSC 2020 have closed. Be on the lookout for status
-          updates soon
-        </AppsClosed>
+        <ApplyNow>
+          Interested in joining the organizer team for next time?
+        </ApplyNow>
+        <ApplyLink href="https://hacksc.com/apply" alt="Apply now">
+          <ApplyButton>Apply now</ApplyButton>
+        </ApplyLink>
       </CTA>
       <DotFlowerLeftGraphic
         src={DotFlower}
@@ -86,6 +78,24 @@ const CTA = styled.div`
     padding-right: 30px;
     box-sizing: border-box;
   `}
+`;
+
+const ApplyLink = styled.a`
+  cursor: pointer;
+`;
+
+const ApplyButton = styled.button`
+  padding: 13px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #ff8379;
+  font-size: 12px;
+  color: #ffffff;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 10px;
+  width: 100%;
 `;
 
 const DotFlowerLeftGraphic = styled.img`
@@ -155,7 +165,7 @@ const ItalicHeader = styled(Header)`
 `;
 
 const Rainbow = styled.span`
-  background: -webkit-linear-gradient(0deg, #feda22, #ff8379);
+  background: -webkit-linear-gradient(0deg, #ff8379, #feda22);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   padding-right: 8px;
@@ -167,11 +177,13 @@ const Date = styled.p`
   margin: 12px 0;
 `;
 
-const AppsClosed = styled.p`
+const ApplyNow = styled.p`
+  margin-top: 10px;
   color: #ff8379;
   font-weight: 600;
   line-height: 22px;
   font-style: italic;
+  font-size: 18px;
 `;
 
 export default Hero;

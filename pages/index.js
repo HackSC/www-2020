@@ -5,8 +5,7 @@ import {
   Details,
   Sponsors,
   Verticals,
-  Footer,
-  MLH
+  Footer
 } from "../components";
 
 const Landing = () => {
@@ -20,7 +19,6 @@ const Landing = () => {
       <Verticals />
       <Sponsors />
       <Footer />
-      <MLH />
     </>
   );
 };
