@@ -13,7 +13,7 @@ const Successes = () => (
           <Number>700+</Number> attendees
         </Stat>
         <Stat>
-          <Number>4600</Number> tasks completeed
+          <Number>4600</Number> tasks completed
         </Stat>
         <Stat>
           <Number>1100+</Number> meals served
@@ -29,7 +29,7 @@ const Successes = () => (
           <Number>365</Number> workshop check-ins
         </Stat>
         <Stat>
-          <Number>121</Number> puppy enthusiastss
+          <Number>121</Number> puppy enthusiasts
         </Stat>
 
         <Stat>
