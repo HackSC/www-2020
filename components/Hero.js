@@ -18,9 +18,7 @@ const Hero = () => {
           Thank you for joining us at <Rainbow>HackSC 2020!</Rainbow>
         </Header>
 
-        <ApplyNow>
-          Interested in joining the organizer team for next time?
-        </ApplyNow>
+        <ApplyNow>Interested in joining the organizer team?</ApplyNow>
         <ApplyLink href="https://hacksc.com/apply" alt="Apply now">
           <ApplyButton>Apply now</ApplyButton>
         </ApplyLink>
@@ -37,7 +35,6 @@ const Hero = () => {
         src={GradientBlob}
         alt="Gradient blob in the background"
       />
-      <LinesGraphic src={Lines} alt="Lines graphic used for decoration" />
     </Wrapper>
   );
 };
@@ -95,6 +92,7 @@ const ApplyButton = styled.button`
   text-align: center;
   margin-top: 10px;
   width: 100%;
+  cursor: pointer;
 `;
 
 const DotFlowerLeftGraphic = styled.img`

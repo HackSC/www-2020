@@ -2,6 +2,7 @@ import {
   Navbar,
   Hero,
   MetaTags,
+  Successes,
   Details,
   Sponsors,
   Verticals,
@@ -16,6 +17,8 @@ const Landing = () => {
 
       <Navbar />
       <Hero />
+      <Successes />
+      <Sponsors />
       <Footer />
     </>
   );
