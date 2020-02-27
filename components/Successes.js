@@ -42,7 +42,7 @@ const Successes = () => (
           <Number>10.6M</Number> points awarded
         </Stat>
         <Stat>
-          <Number>too much</Number> cafeinne consumed
+          <Number>too much</Number> caffeine consumed
         </Stat>
       </Stats>
     </StatsSection>
