@@ -28,7 +28,7 @@ const Impact = () => {
         </StyledBody>
         <StyledBody>
           You can email a copy of your receipt from one of the organizations
-          below to <a href="mailto:">wongkh@usc.edu</a>.
+          below to <a href="mailto:wongkh@usc.edu">wongkh@usc.edu</a>.
         </StyledBody>
         <Subheader>Where you come in</Subheader>
         <OrgsSection>
