@@ -16,7 +16,7 @@ const Impact = () => {
         <StyledBody>
           HackSC is an organization founded to empower <i>all</i> people to
           create, innovate, and enhance change. <br />
-          We stand in solidarity with the countless black victims of poliice
+          We stand in solidarity with the countless Black victims of police
           brutality and racial discrimination. <br />
           Our country needs change that we can only create together. <br />
         </StyledBody>
