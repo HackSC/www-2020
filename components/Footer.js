@@ -71,6 +71,8 @@ const Wrapper = styled.footer`
 `;
 
 const Row = styled.div`
+  max-width: 95%;
+
   display: flex;
   flex-direction: row;
 
