@@ -24,11 +24,11 @@ const Impact = () => {
         <StyledBody>
           From a combination of our internal funds and money raised by our
           organizing team, we will be matching donations to the following
-          foundations and organizations up to <Bold>$XXXX</Bold>.
+          foundations and organizations up to <Bold>$880</Bold>.
         </StyledBody>
         <StyledBody>
           You can email a copy of your receipt from one of the organizations
-          below to <a href="mailto:">max@notarealemail.com</a>.
+          below to <a href="mailto:">wongkh@usc.edu</a>.
         </StyledBody>
         <Subheader>Where you come in</Subheader>
         <OrgsSection>
