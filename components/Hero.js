@@ -4,24 +4,20 @@ import styled from "styled-components";
 
 import { Header, Body, Bold, Italic } from "./type";
 
-import Button from "./Button";
 import DotFlower from "../assets/dot_flower.png";
 import Hand from "../assets/hero_hand_la.png";
 import GradientBlob from "../assets/hero_gradient_blob.png";
-import Lines from "../assets/hero_lines_decoration.png";
-
+import EmailSubscribeForm from "../components/EmailSubscribeForm";
 const Hero = () => {
   return (
     <Wrapper>
       <CTA>
         <Header style={{ fontSize: 25, lineHeight: 1.5 }}>
-          Thank you for joining us at <Rainbow>HackSC 2020!</Rainbow>
+          Thank you for joining us at <Rainbow>HackSC 2020!</Rainbow> Join us at{" "}
+          <Rainbow2>HackSC 2021</Rainbow2> in February!
         </Header>
 
-        <ApplyNow>Interested in joining the organizer team?</ApplyNow>
-        <ApplyLink href="https://hacksc.com/apply" alt="Apply now">
-          <ApplyButton>Apply now</ApplyButton>
-        </ApplyLink>
+        <EmailSubscribeForm />
       </CTA>
       <DotFlowerLeftGraphic
         src={DotFlower}
@@ -165,7 +161,12 @@ const Rainbow = styled.span`
   background: -webkit-linear-gradient(0deg, #ff8379, #feda22);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  padding-right: 8px;
+`;
+
+const Rainbow2 = styled.span`
+  background: -webkit-linear-gradient(0deg, #80b5f4, #4a96f0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 `;
 
 const Date = styled.p`

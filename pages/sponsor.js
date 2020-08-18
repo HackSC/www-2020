@@ -14,10 +14,10 @@ const Sponsor = () => {
       <Wrapper>
         <Header>Sponsor Us</Header>
         <StyledBody>
-          This January, HackSC will bring <Bold>800+</Bold> hackers to the
-          University of Southern California. Students will have 36 hours to
-          create lasting, innovative and impactful products. Sponsors will have
-          an outstanding opportunity to{" "}
+          This February, HackSC will virtually host <Bold>800+</Bold> hackers
+          for a weekend of learning, hacking, and collaboration. Students will
+          have 36 hours to create lasting, innovative and impactful products.
+          Sponsors will have an outstanding opportunity to{" "}
           <Bold>promote your own products and APIs,</Bold> as well as{" "}
           <Bold>access top talent</Bold> from around the country.
         </StyledBody>
@@ -43,7 +43,7 @@ const Sponsor = () => {
               <Number>40:60</Number> female:male ratio
             </Stat>
             <Stat>
-              <Number>145</Number> # of schools applied
+              <Number>150</Number> # of schools applied
             </Stat>
 
             <Stat>

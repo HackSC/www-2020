@@ -13,8 +13,8 @@ const Navbar = () => {
 
         <Links>
           <a href="/">Overview</a>
-          {/*          <a href="/sponsor">Sponsorship</a>
-           */}{" "}
+          <a href="/sponsor">Sponsor Us</a>
+
           <a href="//2019.hacksc.com">HackSC '19</a>
         </Links>
       </Container>

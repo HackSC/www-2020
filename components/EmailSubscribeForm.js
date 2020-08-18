@@ -58,7 +58,7 @@ const EmailSubscribeForm = () => {
       </EmailForm>
 
       <FormContext>
-        Subscribe to be notified of HackSC 2020 events, including when our
+        Subscribe to be notified of HackSC 2021 events, including when our
         application opens.
       </FormContext>
 
